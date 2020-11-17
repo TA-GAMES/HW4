@@ -1,31 +1,35 @@
-# Unity week 2: Formal elements
+שאלה א:
+השינוי שעשיתי הוא שהשחקן ייעלם רק לאחר 3 פסילות, נתתי לו 3 חיים
+עשיתי זאת על ידי הוספת סקריפט "spaceshipColiide"
+ניתן לראות את השינוי בסצנה c-score
 
-A project with step-by-step scenes illustrating some of the formal elements of game development in Unity, including: 
+שינוי נוסף שעשיתי הוא הוספה של שחקן נוסף והפיכת המשחק לתחרות בין 2 שחקנים
+עשיתי זאת על ידי הוספת חללית נוספת שקיבלה בסקריפט התזוזה שלה סקריפט שבניתי שמזיז אותה עם האותיות W,A,S,D
+ניתן לראות את השינוי בסצנה d-shield
 
-* Prefabs for instantiating new objects;
-* Colliders for triggering outcomes of actions;
-* Coroutines for setting time-based rules.
+שאלה ב:
+סעיף 1:
+הוספתי 4 קירות ונתתי להם בוקס קוליידר ורידגטבאדי
+נתתי לשחקן סקריפט חדש שיצרתי ובו כאשר הוא מזהה התנגשות בקיר הוא משנה לרגע את כיוון החללית מה שגורם לתחשוה של התקלות ולא מאפשר לו לעבור את הקיר
+שם הסקריפט הוא movementWrrows
+ניתן לראות זאת בסצנה movement-and-control
 
-Text explanations are available 
-[here](https://github.com/erelsgl-at-ariel/gamedev-5780) in folder 06.
+סעיף ב:
+הוספתי 2 קירות בלתי נראיים, אחד למעלה ואחד למטה
+נתתי לאויבים וללייזרים סקריפט חדש שכתבתי לפיו בהיתקלות בקיר הם נהרסים
+זה גרם לכך שכאשר הם הגיעו לקיר השקוף הם נהרסו
+שם הסקריפט הוא collideWall
+ניתן לראות זאת בסצנה b-instntiate
 
-NOTE: When you first open this project, you may not see the text in the score field.
-This is because TextMesh Pro is not in the project.
-The Unity Editor should hopefully prompt you to import TextMeshPro;
-once you do this, re-open the scenes, and you should be able to see the texts.
+סעיף ג:
+הוספתי 2 קירות שקופים בצד ימין ובצד שמאל
+לכל קיר יצרתי סקריפט לפיו הוא מעביר שחקן שפוגע בו לצד השני של המסך
+הסקריפים נקראים rightCollide, leftCollide
+ניתן לראות זאת בסצנה b-instnttiate
 
-## Credits
-
-Programming:
-* Maoz Grossman
-* Erel Segal-Halevi
-
-Online courses:
-* [The Ultimate Guide to Game Development with Unity 2019](https://www.udemy.com/the-ultimate-guide-to-game-development-with-unity/), by Jonathan Weinberger
-
-Graphics:
-* [Matt Whitehead](https://ccsearch.creativecommons.org/photos/7fd4a37b-8d1a-4d4c-80a2-4ca4a3839941)
-* [Kenney's space kit](https://kenney.nl/assets/space-kit)
-* [Ductman's 2D Animated Spacehips](https://assetstore.unity.com/packages/2d/characters/2d-animated-spaceships-96852)
-* [Franc from the Noun Project](https://commons.wikimedia.org/w/index.php?curid=64661575)
-* [Greek-arrow-animated.gif by Andrikkos is licensed under CC BY-SA 3.0](https://search.creativecommons.org/photos/2db102af-80d0-4ec8-9171-1ac77d2565ce)
+שאלה 3:
+המשחק שאני מתכנן לעבוד עליו מכיל בתוכו בריחה ממבוך.
+בכדי לדמות את זה יצרתי מבוך ומטרת השחקן היא לברוח ממנו.
+נגיעה בגבולות המבוך או באחת המפלצות בו הורדת את השחקן
+אם יצליח השחקן לצאת מהבמוך הוא עובר לסצינה בה כתוב שהוא ניצח
+ניתן לראות זאת בסצנות Q3, Q3-2
